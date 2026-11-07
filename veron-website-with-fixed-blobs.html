@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Veron Eze — 3x3 Basketball Player & Content Creator</title>
+<meta name="description" content="Veron Eze: professional 3x3 basketball player for GB and England, and a content creator who shoots, edits and plans.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --bg:#FFFFFF; --bg2:#F5F5F7; --surface:#FFFFFF; --ink:#1D1D1F; --muted:#6E6E73; --line:#D2D2D7;
+  --accent:#0071E3; --accent-ink:#FFFFFF; --frame:#E8E8ED;
+  --display:-apple-system,BlinkMacSystemFont,"SF Pro Display",Inter,"Segoe UI",system-ui,sans-serif;
+  --body:-apple-system,BlinkMacSystemFont,"SF Pro Text",Inter,"Segoe UI",system-ui,sans-serif;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:1.05rem;line-height:1.6}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 82%,transparent);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px}
+.logo{font-family:var(--display);font-weight:600;font-size:1.1rem;text-decoration:none;letter-spacing:-.01em}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:.95rem;font-weight:500}
+nav ul a{text-decoration:none;color:var(--muted)}
+nav ul a:hover{color:var(--ink)}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;background:var(--accent);color:var(--accent-ink);font-weight:600;text-decoration:none;border:2px solid var(--accent)}
+.btn.ghost{background:transparent;color:var(--accent);border-color:var(--accent)}
+.btn:hover{filter:brightness(1.08)}
+h1,h2,h3{font-family:var(--display);line-height:1.05;margin:0;letter-spacing:-.035em}
+h1{font-size:clamp(2.6rem,6.2vw,5rem);font-weight:700;margin-bottom:24px}
+.eyebrow{margin:0 0 18px;font-weight:600;color:var(--accent);font-size:.98rem}
+h2{font-size:clamp(2.1rem,5vw,3.6rem);font-weight:700}
+h3{font-size:1.3rem;font-weight:600;letter-spacing:-.02em}
+p{margin:0 0 1em;max-width:62ch}
+section{padding:104px 0}
+section:nth-of-type(even){background:var(--bg2)}
+.hero{padding:56px 0 104px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.role{font-size:1.12rem;margin:0 0 24px;color:var(--muted);max-width:54ch;line-height:1.6}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.ph{position:relative;background:var(--frame);border:1px dashed var(--muted);border-radius:20px;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--muted);font-size:.9rem;padding:16px;overflow:hidden}
+.ph .play{width:56px;height:56px;border-radius:50%;background:var(--accent);display:grid;place-items:center;margin:0 auto 10px}
+.ph .play::after{content:"";border-left:16px solid var(--accent-ink);border-top:10px solid transparent;border-bottom:10px solid transparent;margin-left:4px}
+.portrait{
+  aspect-ratio:4/5;
+  padding:0;
+  border:none;
+  background:none;
+  overflow:hidden;
+}
+
+.hero-portrait{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  border-radius:20px;
+}
+.v916{aspect-ratio:9/16}
+.v169{aspect-ratio:16/9}
+.vsl{margin-top:72px}
+.stats{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 28px;padding:0;list-style:none}
+.stats li{background:var(--bg2);border-radius:999px;padding:7px 16px;font-weight:500;font-size:.95rem}
+.vision{background:var(--ink);color:var(--bg);border-radius:28px;padding:56px;margin-top:56px}
+.vision h3{font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:14px}
+.vision p{margin:0;color:inherit;opacity:.85;max-width:60ch}
+.split-head{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:end;margin-bottom:40px}
+.split-head p{margin:0;color:var(--muted)}
+.reels{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.cap{margin-top:8px;font-size:.9rem;font-weight:600}
+.cap span{display:block;color:var(--muted);font-weight:400}
+.client-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.client{background:var(--surface);border-radius:24px;padding:24px}
+.client .ph{margin-bottom:16px}
+.client p{color:var(--muted);margin:8px 0 0;font-size:.98rem}
+.worked{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 56px;padding:0;list-style:none}
+.worked li{flex:1 1 150px;min-height:72px;border:1px dashed var(--muted);border-radius:6px;display:grid;place-items:center;color:var(--muted);font-size:.9rem;padding:8px}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+blockquote{margin:0;background:var(--bg2);border-radius:24px;padding:28px}
+blockquote p{font-size:1.05rem;color:var(--ink)}
+blockquote footer{position:static;border:0;background:none;color:var(--muted);font-size:.92rem;font-weight:600}
+.contact{text-align:left}
+.contact h2{font-size:clamp(2.6rem,8vw,6rem)}
+.contact p{margin:24px 0 32px;color:var(--muted)}
+footer.site{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:.9rem}
+footer.site .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+@media (max-width:860px){
+  .hero-grid,.bio-grid,.split-head{grid-template-columns:1fr;gap:32px}
+  .reels{grid-template-columns:repeat(2,1fr)}
+  .client-grid,.quotes{grid-template-columns:1fr}
+  .portrait{max-width:380px}
+  nav ul{gap:14px;font-size:.88rem}
+  nav ul li:nth-child(n+4){display:none}
+  section{padding:64px 0}
+  .vision{padding:32px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Fixed ambient colour blobs: they stay in the same viewport positions while scrolling. */
+.ambient-blobs{
+  position:fixed;
+  inset:0;
+  z-index:0;
+  overflow:hidden;
+  pointer-events:none;
+  contain:paint;
+}
+.ambient-blob{
+  position:absolute;
+  width:clamp(260px, 36vw, 520px);
+  aspect-ratio:1;
+  border-radius:50%;
+  filter:blur(100px);
+  opacity:.17;
+}
+.ambient-blob--orange{
+  left:-170px;
+  bottom:5vh;
+  background:#FF8A3D;
+}
+.ambient-blob--blue{
+  right:-170px;
+  top:5vh;
+  background:#398BFF;
+}
+/* Keep page content above the fixed background layer. */
+header, main, footer.site{
+  position:relative;
+  z-index:1;
+}
+/* Let the blobs show softly through alternating sections. */
+section:nth-of-type(even){
+  background:color-mix(in srgb, var(--bg2) 76%, transparent);
+}
+@media (max-width:860px){
+  .ambient-blob{
+    width:clamp(220px, 58vw, 340px);
+    filter:blur(85px);
+    opacity:.14;
+  }
+  .ambient-blob--orange{left:-145px;bottom:8vh}
+  .ambient-blob--blue{right:-145px;top:8vh}
+}
+
+</style>
+</head>
+<body>
+<div class="ambient-blobs" aria-hidden="true">
+  <span class="ambient-blob ambient-blob--orange"></span>
+  <span class="ambient-blob ambient-blob--blue"></span>
+</div>
+<header>
+  <div class="wrap">
+    <nav aria-label="Main">
+      <a class="logo" href="#top">Veron Eze</a>
+      <ul>
+        <li><a href="#front">In front of the camera</a></li>
+        <li><a href="#behind">Behind the camera</a></li>
+        <li><a href="#proof">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" id="about">
+    <div class="wrap">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">UGC Creator · Content Strategist</p>
+        <h1>Content. With purpose. <span style="color:var(--accent)">That converts.</span></h1>
+        <p class="role">I’m Veron Eze — a UGC creator and content strategist who loves bringing ideas to life. I work with brands to create thoughtful content that tells their story, connects with the right people and makes more of their potential on social media. From the first idea to the final edit, I want to create content that feels natural, purposeful and true to the brand behind it.</p>
+        <ul class="stats">
+          <li>Team GB Athlete</li>
+          <li>Editor</li>
+          <li>Content Strategist</li>
+        </ul>
+        <div class="cta">
+          <a class="btn" href="#front">See the work</a>
+          <a class="btn ghost" href="#contact">Get in touch →</a>
+        </div>
+      </div>
+    <div class="ph portrait">
+  <img
+    src="./DSC00104.jpg"
+    alt="Veron Eze"
+    class="hero-portrait"
+  >
+</div>
+    </div>
+      <div class="ph v169 vsl" role="img" aria-label="Intro video goes here">
+        <div><div class="play"></div>Intro video (VSL)<br><small>Drop your video in here</small></div>
+      </div>
+      <div class="vision">
+        <h3>Where I’m headed</h3>
+        <p>On the court, I want to keep growing with GB and England and play 3x3 on the biggest stages. Off it, I’m building a creative career that sits alongside sport: telling stories that move people and helping brands and athletes show up as themselves. I want to prove you don’t have to pick one lane.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="front">
+    <div class="wrap">
+      <div class="split-head">
+        <h2>In front of the camera.</h2>
+        <p>UGC, storytelling videos and anything that puts me on screen. Real delivery, real stories, made to feel native to your brand.</p>
+      </div>
+      <div class="reels">
+        <div><div class="ph v916" role="img" aria-label="UGC video 1"><div><div class="play"></div>UGC</div></div><div class="cap">Brand name<span>UGC ad</span></div></div>
+        <div><div class="ph v916" role="img" aria-label="UGC video 2"><div><div class="play"></div>UGC</div></div><div class="cap">Brand name<span>UGC ad</span></div></div>
+        <div><div class="ph v916" role="img" aria-label="Storytelling video 1"><div><div class="play"></div>Story</div></div><div class="cap">Title<span>Storytelling</span></div></div>
+        <div><div class="ph v916" role="img" aria-label="Storytelling video 2"><div><div class="play"></div>Story</div></div><div class="cap">Title<span>Storytelling</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="behind">
+    <div class="wrap">
+      <div class="split-head">
+        <h2>Behind the camera.</h2>
+        <p>Client work. I plan the content, shoot the footage and edit it into something ready to post.</p>
+      </div>
+      <div class="reels">
+        <div><div class="ph v916" role="img" aria-label="Client project 1"><div><div class="play"></div>Client</div></div><div class="cap">Client name<span>Client work</span></div></div>
+        <div><div class="ph v916" role="img" aria-label="Client project 2"><div><div class="play"></div>Client</div></div><div class="cap">Client name<span>Client work</span></div></div>
+        <div><div class="ph v916" role="img" aria-label="Client project 3"><div><div class="play"></div>Client</div></div><div class="cap">Client name<span>Client work</span></div></div>
+        <div><div class="ph v916" role="img" aria-label="Client project 4"><div><div class="play"></div>Client</div></div><div class="cap">Client name<span>Client work</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="proof">
+    <div class="wrap">
+      <h2>Worked with.</h2>
+      <p style="margin:16px 0 32px;color:var(--muted)">Brands, teams and people I’ve made content for.</p>
+      <ul class="worked">
+        <li>Logo</li><li>Logo</li><li>Logo</li><li>Logo</li><li>Logo</li>
+      </ul>
+      <h2 style="font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:28px">What they say.</h2>
+      <div class="quotes">
+        <blockquote><p>Add a real  here, ideally two or three sentences about how you work and what you delivered.</p><footer>Name, brand</footer></blockquote>
+        <blockquote><p>Add a real testimonial here, ideally two or three sentences about how you work and what you delivered.</p><footer>Name, brand</footer></blockquote>
+        <blockquote><p>Add a real testimonial here, ideally two or three sentences about how you work and what you delivered.</p><footer>Name, brand</footer></blockquote>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2>Let’s make something.</h2>
+      <p>Brand deals, UGC, shoots or edits: send me a message with what you’re working on.</p>
+      <div class="cta">
+        <a class="btn" href="https://www.instagram.com/Vc.ezey" rel="noopener">Message on Instagram</a>
+        <a class="btn ghost" href="https://www.tiktok.com/@Veezyouttahere" rel="noopener">Follow on TikTok</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>© Veron Eze. All rights reserved.</span>
+    <span>Instagram @Vc.ezey · TikTok @Veezyouttahere</span>
+  </div>
+</footer>
+</body>
+</html>
